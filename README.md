@@ -1,7 +1,5 @@
 # Overview
 
-## Background
-
 Goal of this project is to create a web application for having parallel conversation with different
 AI/LLM models at same time. Usage is comparison of quality in responses from different models.
 
@@ -10,7 +8,7 @@ spare. Motivation for doing this project, instead  of something else, is to impr
 knowledge and do something fun with AI. It can also be used as a reference project to show
 how easy it is implement programmatic access to LLMs.
 
-## Status
+# Status
 
 Project is now on standby due to other assignments. Code is left as is it looked when it was 
 functional for the first time, in other words code is a mess. Here is a list of other known 
@@ -47,7 +45,7 @@ main class and frontend run through Angular CLI (e.g. "ng serve").
 # Setup
 
 Here are the steps required to run the application on your dev computer:
-<ol>
+<ul>
     <li>Install and run Ollama. Also make sure you have a number of models downloaded.</li>
     <li>Install Node, NPM and angular CLI.</li>
     <li>Create an OpenAI account with access to at least GPT-4o mini (since it is hard-coded). 
@@ -57,7 +55,7 @@ Here are the steps required to run the application on your dev computer:
     <li>Start frontend: in any shell, line go to mgpt-frontend folder and run "ng serve".</li>
     <li>Start browser and go to http://localhost:4200. If everything works you should see something 
         similar to screenshot above.</li>
-</ol>
+</ul>
 
 # Sprint Plan
 
@@ -101,7 +99,7 @@ Goals:
         <li>No streaming. Deepseek will be very hard to use since it chats for minutes.</li>
         <li>Only local Ollama models supported.</li>
         <li>Frontend must be run through "ng serve". No packaging etc</li>
-    </ul>
+    </ul></li>>
 </ul>
 
 Lessons learned:
