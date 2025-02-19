@@ -1,0 +1,40 @@
+<main class="main">
+  <div class="content">
+    <h1 style="margin-left: 10px">LLMs to talk to</h1>
+
+
+    <div *ngFor="let modelFamily of availableModels" style="margin: 10px;">
+      <h2 style="margin-left: 25px">{{modelFamily.name}}</h2>
+      <div *ngFor="let model of getAvailableModels(modelFamily.id)" style="margin: 10px;">
+        <input type="checkbox" [(ngModel)]="model.selected" value="{{model.name}}" (ngModelChange)="addRemoveModel(modelFamily.id, model)" style="margin=10px; margin-left: 50px">
+        <label>{{model.name}}</label><br>
+      </div>
+    </div>
+
+    <hr>
+
+    <h1 style="margin-left: 10px">Your questions</h1>
+    <input type="text" [(ngModel)]="nextPrompt" (change)="postNewPrompt()" placeholder="Your question goes here" style="width: 500px;margin-left: 50px;margin-top: 10px;margin-bottom: 10px">
+    <button (click)="postNewPrompt()" style="margin-left: 25px">Submit</button>
+    <hr>
+
+    <h1 style="margin-left: 10px">Conversations</h1>
+    <div class="row">
+      <div *ngFor="let conversation of conversations" style="float: left; margin-top: 10px; width: {{getConversationColumnWidth()}}; border-right: 1px solid grey">
+        <div style="margin-left: 20px; margin-right: 20px">
+        <h2 style="text-align: center">{{conversation.modelName}}</h2>
+        <div>
+          <div *ngFor="let promptAndResponse of conversation.promptsAndResponses">
+            <div style="font-style: italic; font-weight: bold">{{promptAndResponse.prompt}}</div>
+            <!-- Response are converted to HTML to keep different font styles, paragraphs etc and displayed as inner HTML -->
+            <div [innerHTML]="promptAndResponse.response"></div>
+            <br>
+            <br>
+          </div>
+        </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</main>
+
