@@ -12,7 +12,8 @@ how easy it is implement programmatic access to LLMs.
 
 Project is now on standby due to other assignments. Code is left as is it looked when it was 
 functional for the first time, in other words code is a mess. Here is a list of other known 
-limitations: <ul>
+limitations: 
+<ul>
     <li>There is no packaging or deployment of artifacts.</li>
     <li>Applications does not hold state of conversation so every question will be answered to 
         without considering
@@ -22,7 +23,7 @@ limitations: <ul>
     <li>UI is extremely simple. For a dummy answer ("...") is the only indication that we are 
         waiting for an answer.</li>
     <li>...</li>
-<ul></ul>
+</ul>
 
 Here is a screenshot of application in action:
 
